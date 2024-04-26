@@ -15,6 +15,13 @@
 
 lifetable<-function(x=NULL,n=NULL,wx=NULL,wt=NULL,grp=NULL,dx=NULL,dt=NULL,data=NULL){
 
+  ensure_package <- function(pkg) {
+    if (!require(pkg, character.only = TRUE)) {
+      install.packages(pkg)
+    }
+    library(pkg, character.only = TRUE)
+  }
+
   ensure_package("tidyverse")
 
   env_data <- if (is.null(data)) parent.frame() else data
