@@ -18,7 +18,8 @@
 #'                   variableColumn = "disease", SD_rate = c(50, 79, 105, 120, 250))
 
 
-Age_Adjust_indirect <- function(dataframe, ageColumn, deathColumn, variableColumn, SD_rate = C(50, 79, 105, 120, 250),
+Age_Adjust_indirect <- function(dataframe, ageColumn, deathColumn, variableColumn,
+                                SD_rate = c(50, 79, 105, 120, 250),
                                 ageBreaks = c(0,15,45,55,65,Inf)) {
 
   # Separate the data frame according to variableColumn
